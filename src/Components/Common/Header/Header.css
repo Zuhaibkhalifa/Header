@@ -1,0 +1,19 @@
+
+.navbar{
+    display: flex;
+    background-color:   var(--color-primary) ;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-primary);
+    font-size: x-large;
+    color: black;
+    margin-top: 20px;
+}
+.navbar1{
+    display: flex;
+    justify-content:space-between;
+    width:600px;
+    position: relative;
+    right: 180px;
+}

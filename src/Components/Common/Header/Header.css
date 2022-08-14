@@ -1,0 +1,14 @@
+
+.navbar{
+    display: flex;
+    background-color:   var(--color-primary) ;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-primary);
+    font-size: x-large;
+    color: black
+}
+.navbar link{
+    color: black!important;
+}

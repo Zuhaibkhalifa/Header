@@ -7,8 +7,13 @@
     justify-content: space-between;
     font-family: var(--font-primary);
     font-size: x-large;
-    color: black
+    color: black;
+    margin-top: 20px;
 }
-.navbar link{
-    color: black!important;
+.navbar1{
+    display: flex;
+    justify-content:space-between;
+    width:600px;
+    position: relative;
+    right: 180px;
 }

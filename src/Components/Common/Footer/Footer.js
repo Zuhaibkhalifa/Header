@@ -15,22 +15,22 @@ const Footer = () => {
                 Company
               </Box>
               <Box>
-                <Link href="" color={"#edf2fd"}>
+                <Link href="/aboutus" color={"#edf2fd"}>
                   About Us
                 </Link>
               </Box>
               <Box>
-                <Link href="" color={"#edf2fd"}>
+                <Link href="blog" color={"#edf2fd"}>
                   Blog
                 </Link>
               </Box>
               <Box>
-                <Link href="" color={"#edf2fd"}>
+                <Link href="partnership" color={"#edf2fd"}>
                   Partnership
                 </Link>
               </Box>
               <Box>
-                <Link href="" color={"#edf2fd"}>
+                <Link href="careers" color={"#edf2fd"}>
                   Careers
                 </Link>
               </Box>

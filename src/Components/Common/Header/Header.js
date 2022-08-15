@@ -26,9 +26,6 @@ const Header= () =>{
       <Link className={active === '/Contact' ? 'aactive': false} onClick={()=> setActive('/Contact')} to="/Contact" style={{textDecoration: 'none', color:"black"}}>Contact</Link>
       </div>
 
-      <Link className={active === '/form' ? 'aactive': false} onClick={()=> setActive('/form')}  to="/form" style={{textDecoration: 'none', color:"black",marginRight:'40px'}}>
-        Register
-      </Link>
 
     
   </div>

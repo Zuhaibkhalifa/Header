@@ -10,7 +10,7 @@ function Contact() {
     >
       <Grid container spacing={10}>
         <Grid item xs={6}>
-          <div className="form">
+          <div className="forms">
             <h1>Contact Us</h1>
             <h3>Our friendly team would love to here from you</h3>
             <div className="inner-form">

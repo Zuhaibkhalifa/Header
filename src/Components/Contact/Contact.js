@@ -4,7 +4,10 @@ import "./contact.css";
 
 function Contact() {
   return (
-    <Container maxWidth="lg">
+    <Container
+      sx={{ position: "relative", top: 100, height: "81.9vh" }}
+      maxWidth="lg"
+    >
       <Grid container spacing={10}>
         <Grid item xs={6}>
           <div className="form">

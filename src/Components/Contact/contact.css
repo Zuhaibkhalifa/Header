@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 20px;
+  position: relative;
 }
 .inner-form {
   display: flex;

@@ -49,23 +49,23 @@ const Home = () => {
       <Container>
         <Box sx={{ bgcolor: '#8d99ae', height: '100vh', width: "110%", position:"relative", left:"10px", }}>
           <Box className="form">
-          <Typography variant="h5" component="h5" sx={{textAlign: "center"}}>Enter your details below</Typography>
+          <Typography variant="h5" component="h5" sx={{textAlign: "center", pl:20}}>Enter your details below</Typography>
           <TextField
-          sx={{ width: "100%", mt:3 }}
+          sx={{ width: "70%", mt:3, ml:11 }}
           id="outlined-basics"
           label="username"
           variant="outlined"
           onChange={handleName}
         ></TextField>
         <TextField
-          sx={{ width: "100%", mt: 2 }}
+          sx={{ width: "70%", mt: 2, ml:11 }}
           id="outlined-basics"
           label="Email"
           variant="outlined"
           onChange={handleEmail}
         ></TextField>
         <TextField
-        sx={{ width: "100%", mt: 2 }}
+        sx={{ width: "70%", mt: 2, ml:11 }}
         id="outlined-basics"
         label="Message"
         multiline
@@ -79,7 +79,7 @@ const Home = () => {
         </Box>
       </Container>
       <Container>
-        <Box className="back" sx={{height: '100vh', width: "900px", marginLeft:-3, position:"relative", left:"60px"}}>
+        <Box className="back" sx={{height: '100vh', width: "900px", marginLeft:-3, position:"relative", left:"15px"}}>
           
         </Box>
       </Container>

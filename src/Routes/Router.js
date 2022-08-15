@@ -6,7 +6,6 @@ import About from "../Components/About/About";
 import Header from "../Components/Common/Header/Header";
 import Footer from "../Components/Common/Footer/Footer";
 import Contact from "../Components/Contact/Contact";
-import NewHome from "../Components/NewHome/NewHome"
 
 function Router() {
   return (
@@ -14,7 +13,7 @@ function Router() {
       <Header />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/about" exact element={<NewHome />} />
+        <Route path="/about" exact element={<About />} />
         <Route path="/Contact" exact element={<Contact />} />
       </Routes>
       <Footer />

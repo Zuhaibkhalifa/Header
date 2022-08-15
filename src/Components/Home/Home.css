@@ -33,3 +33,10 @@ body {
   margin-bottom: 10%;
   margin-top: 5%;
 }
+
+.btn{
+    transition-duration: 0.4s;
+}
+.btn:hover {
+  background-color: #2b2d42;
+}

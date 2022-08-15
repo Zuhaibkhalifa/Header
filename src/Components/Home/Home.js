@@ -9,9 +9,9 @@ import axios from "axios";
 import { Grid } from "@mui/material";
 import "./Home.css";
 
-const NewHome = () => {
+const Home = () => {
 
-    const [name, setName] = useState({});
+  const [name, setName] = useState({});
   const [email, setEmail] = useState({});
   const [message, setMessage] = useState({});
 
@@ -28,7 +28,15 @@ const NewHome = () => {
   };
 
   const handleClick = () => {
-    console.log(name, email, message);
+      axios.get("https://dummy-server123.herokuapp.com/",{
+        user_name : name,
+        email : email,
+        test : message
+      } ).then((x) => {
+        console.log(x);
+      },(e) => {
+        console.log(e)
+      })
   };
   
     return(
@@ -69,13 +77,13 @@ const NewHome = () => {
                 onChange={handleMessage}
               ></TextField>
               <Button
+                className="btn"
                 variant="outlined"
                 onClick={handleClick}
                 sx={{
                   width:"30%",
                   m:"auto",
-                  backgroundColor: "#2b2d42",
-                  
+                  backgroundColor: "#8d99ae",
                 }}
               >
                 Submit
@@ -92,4 +100,4 @@ const NewHome = () => {
     )
 }
 
-export default NewHome;
+export default Home;

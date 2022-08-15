@@ -10,7 +10,7 @@ const Footer = () => {
       <Box bgcolor={"#2b2d42"}>
         <Container maxWidth="lg">
           <Grid container spacing={5}>
-            <Grid item xs={3} sm={4}>
+            <Grid item xs={12} sm={4}>
               <Box borderBottom={1} color={"#edf2fd"}>
                 Company
               </Box>
@@ -32,6 +32,56 @@ const Footer = () => {
               <Box>
                 <Link href="careers" color={"#edf2fd"}>
                   Careers
+                </Link>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Box borderBottom={1} color={"#edf2fd"}>
+                Resources
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  Application
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  Documentation
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  System
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  FAQ
+                </Link>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Box borderBottom={1} color={"#edf2fd"}>
+                Social
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  Facebook
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  Twitter
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  Instagram
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color={"#edf2fd"}>
+                  Linkedin
                 </Link>
               </Box>
             </Grid>

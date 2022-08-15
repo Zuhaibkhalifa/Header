@@ -5,29 +5,31 @@ body {
   padding: 0;
 }
 
-
-.back{
-  background-image:url(../../Assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
+.bg{
+    background-image:url(../../Assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.form{
-  width: 600px;
-  height: 600px;
+.for{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 95%;
+  width: 60%;
+  margin: auto;
   background-color: #edf2fd;
   border: 1px solid #8d99ae;
-  margin: "auto";
-  border-radius: 7px;
-  position: relative;
-  top: 200px;
-  left:200px
 }
 
-.head{
-  position: absolute;
-  top: 100px;
-  left: 227px;
+.inner{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 75%;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }

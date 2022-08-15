@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+
 import AbcRoundedIcon from '@mui/icons-material/AbcRounded';
 import {useState} from 'react'
 
@@ -11,7 +12,11 @@ const Header= () =>{
   return (
     
   <div className='navbar'>
-    <AbcRoundedIcon style={{fontSize:'60pt',marginLeft:'20px',width:'5%'}}/>
+   
+      <AbcRoundedIcon style={{fontSize:'60pt',marginLeft:'20px',width:'5%'}}/>
+ 
+    
+  
     
     <div className='navbar1'>
       <Link className={active ==='/' ? 'aactive': false} onClick={()=> setActive('/') }to="/" style={{textDecoration: 'none',color:"black"}}>Home</Link>
@@ -28,4 +33,5 @@ const Header= () =>{
     
   </div>
 )}
+
 export default Header;

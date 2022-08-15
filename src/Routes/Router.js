@@ -10,13 +10,13 @@ import Contact from "../Components/Contact/Contact";
 function Router() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/about" exact element={<About />} />
         <Route path="/Contact" exact element={<Contact />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

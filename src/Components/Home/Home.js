@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import axios from "axios";
 import "./Home.css";
-import react from "react";
+import React from "react";
 
 const Home = () => {
   // <<<<<<< HEAD

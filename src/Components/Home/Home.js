@@ -1,6 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
 import axios from "axios";
+
+import "./Home.css";
 import React from "react";
+
 import { useState } from "react";
 import {Table,
 TableBody,
@@ -12,19 +15,18 @@ Paper,
 } from "@mui/material";
 
 const Home = () => {
-
-  const [table,setTable] = useState([])
+  const [table, setTable] = useState([]);
 
   const submit = () => {
-    axios.get("https://dummy-server123.herokuapp.com/user")
-    .then((response) =>{
+    axios.get("https://dummy-server123.herokuapp.com/user").then((response) => {
       console.log(response);
-      setTable(response.data.data)
-    })
-  }
+      setTable(response.data.data);
+    });
+  };
 
-  return(
+  return (
     <>
+
     <Button onClick={submit} variant="outlined">Get Data</Button>
     <Box>
                 <TableContainer component={Paper}>
@@ -76,8 +78,21 @@ const Home = () => {
         )
       })
     }
+
+      <Button onClick={submit}>Get</Button>
+      {table.map((value) => {
+        return (
+          <Box>
+            <Typography>{value.name}</Typography>
+            <Typography>{value.email}</Typography>
+            <Typography>{value.message}</Typography>
+            <br />
+          </Box>
+        );
+      })}
+
     </>
-  )
-}
+  );
+};
 
 export default Home;

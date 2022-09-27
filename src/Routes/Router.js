@@ -1,21 +1,25 @@
+import { Check } from "@mui/icons-material";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../Components/Home/Home";
-import About from "../Components/About/About";
-import Header from "../Components/Common/Header/Header";
+import Checkout from "../Components/Checkout/Checkout";
 import Footer from "../Components/Common/Footer/Footer";
-import Contact from "../Components/Contact/Contact";
+
+import Home from "../Components/Home/Home";
+import News from "../Components/News/News";
+import Our from "../Components/Our/Our";
+import Product from "../Components/Product/Product";
+import Why from "../Components/Why/Why";
 
 function Router() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/about" exact element={<About />} />
-        <Route path="/Contact" exact element={<Contact />} />
-      </Routes>
+      <Home />
+      <Why />
+      <Product />
+      <Checkout />
+      <Our />
+      <News />
       <Footer />
     </>
   );

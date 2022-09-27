@@ -1,145 +1,135 @@
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import Container from "@mui/material/Container";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import { useState } from "react";
-import axios from "axios";
-import "./Home.css";
-import react from "react";
+import React from "react";
+import { Box, Typography, Button, Grid, Paper, TextField } from "@mui/material";
+import Header from "../Common/Header/Header";
+import background from "../../Assets/Images/background.png";
+import javaS from "../../Assets/Images/javaS.png";
+import net from "../../Assets/Images/net.png";
+import vue from "../../Assets/Images/vue.png";
+import tool from "../../Assets/Images/tool.png";
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import "../../Assets/Styles/home.scss";
 
-const Home = () => {
-  // <<<<<<< HEAD
-  //   const [massage, setMassage] = useState(null);
-  //   useEffect(() => {
-  //     const curr = axios
-  //       .get("https://dummy-server123.herokuapp.com/")
-  //       .then((data) => {
-  //         setMassage(data.data);
-  //         console.log(data);
-  //       })
-  //       .catch((err) => console.log(err));
-  //   }, []);
-  //   return (
-  //     <div>
-  //       {massage && (
-  //         <div>
-  //           <h1>{massage.status}</h1>
-  //           <h2>{massage.data}</h2>
-  //         </div>
-  //       )}
-  //     </div>
-  // =======
+const icons = {
+  position: "absolute",
+  zIndex: 1,
+  filter: "drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.1))",
+  borderRadius: "5px",
+};
 
-  const [name, setName] = useState({});
-  const [email, setEmail] = useState({});
-  const [message, setMessage] = useState({});
-
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmail = (em) => {
-    setEmail(em.target.value);
-  };
-
-  const handleMessage = (msg) => {
-    setMessage(msg.target.value);
-  };
-
-  const handleClick = () => {
-    console.log(name, email, message);
-  };
-
-  // if(name !== "" && email != ""){
-  //   axios.post("https://dummy-server123.herokuapp.com/",{
-  //     user_name : name,
-  //     eamil : email,
-  //     test : message
-  //   } ).then((x) => {
-  //     console.log(x);
-  //   },(e) => {
-  //     console.log(e)
-  //   })
-  //   }else alert("Please fill the form");
-
+function Home() {
   return (
-    <>
-      <Box sx={{ display: "flex" }}>
-        <Container>
-          <Box
+    <div className="hidden">
+      <Header />
+      <Box
+        sx={{
+          ...icons,
+          right: "250px",
+          top: "220px",
+        }}
+      >
+        <img src={background} alt="Ang"></img>
+      </Box>
+      <Box
+        sx={{
+          ...icons,
+          right: "540px",
+          top: "450px",
+        }}
+      >
+        <img src={javaS} alt="Javs"></img>
+      </Box>
+      <Box
+        sx={{
+          ...icons,
+          right: "80px",
+          top: "500px",
+        }}
+      >
+        <img src={net} alt="net"></img>
+      </Box>
+      <Box
+        sx={{
+          ...icons,
+          right: "340px",
+          top: "600px",
+        }}
+      >
+        <img src={vue} alt="vue"></img>
+      </Box>
+      <Box
+        sx={{
+          ...icons,
+          right: "620px",
+          top: "260px",
+        }}
+      >
+        <img src={tool} alt="tools"></img>
+      </Box>
+      <Box
+        sx={{
+          width: "885px",
+          height: "891px",
+          top: "-109px",
+          right: "-200px",
+          position: "absolute",
+          borderRadius: "50%",
+          background:
+            "linear-gradient(238.66deg, #0283E9 -18.13%, #FC01CA 120.27%)",
+          transform: "rotate(-180deg)",
+        }}
+      ></Box>
+      <Box sx={{ position: "absolute", top: "254px", left: "200px" }}>
+        <Grid container sx={{ width: "700px", mb: 5 }}>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: "70px", fontWeight: "700", mb: 5 }}
+          >
+            World Top <span className="span">Themes, Plugins & Templates</span>
+          </Typography>
+          <Typography
+            variant="p"
             sx={{
-              bgcolor: "#8d99ae",
-              height: "100vh",
-              width: "110%",
-              position: "relative",
-              left: "10px",
+              fontSize: "22px",
+              fontWeight: "600",
+              lineHeight: "30px",
+              color: "#828089",
+              width: "600px",
             }}
           >
-            <Box className="form">
-              <Typography
-                variant="h5"
-                component="h5"
-                sx={{ textAlign: "center", pl: 20 }}
-              >
-                Enter your details below
-              </Typography>
-              <TextField
-                sx={{ width: "70%", mt: 3, ml: 11 }}
-                id="outlined-basics"
-                label="username"
-                variant="outlined"
-                onChange={handleName}
-              ></TextField>
-              <TextField
-                sx={{ width: "70%", mt: 2, ml: 11 }}
-                id="outlined-basics"
-                label="Email"
-                variant="outlined"
-                onChange={handleEmail}
-              ></TextField>
-              <TextField
-                sx={{ width: "70%", mt: 2, ml: 11 }}
-                id="outlined-basics"
-                label="Message"
-                multiline
-                variant="outlined"
-                rows={10}
-                onChange={handleMessage}
-              ></TextField>
-              <Button
-                variant="outlined"
-                onClick={handleClick}
-                sx={{
-                  marginTop: 5,
-                  marginLeft: 30,
-                  bgcolor: "#2b2d42",
-                  padding: "10px 30px",
-                }}
-              >
-                Submit
-              </Button>
-            </Box>
-            <Typography className="head" variant="h3" component="h3">
-              Library Registration Form
-            </Typography>
-          </Box>
-        </Container>
-        <Container>
-          <Box
-            className="back"
-            sx={{
-              height: "100vh",
-              width: "900px",
-              marginLeft: -3,
-              position: "relative",
-              left: "15px",
-            }}
-          ></Box>
-        </Container>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
+            ultricies habitant eget volutpat ut aenean in dolor. Praesent mi
+            velit in id hac platea leo vulputate.
+          </Typography>
+        </Grid>
+        <Grid sx={{ width: "550px" }}>
+          <Paper elevation={5}>
+            <TextField
+              variant="standard"
+              InputProps={{ disableUnderline: true }}
+              color="primary"
+              sx={{ p: 2, width: "405px", borderBottom: "none" }}
+              placeholder="e.g. “wordpress”"
+            />
+
+            <Button
+              startIcon={<SearchRoundedIcon />}
+              sx={{
+                textTransform: "none",
+                mt: 0.5,
+                p: 1.5,
+                fontSize: "18px",
+                background:
+                  "linear-gradient(238.66deg, #0283E9 -18.13%, #FC01CA 120.27%)",
+              }}
+              aria-label="menu"
+            >
+              Search
+            </Button>
+          </Paper>
+        </Grid>
       </Box>
-    </>
+    </div>
   );
-};
+}
 
 export default Home;

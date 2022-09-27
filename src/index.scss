@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --swiper-theme-color: white;
+
+  // --swiper-theme-color: linear-gradient(
+  //   238.66deg,
+  //   #0283e9 -18.13%,
+  //   #fc01ca 120.27%
+  // );
+  --swiper-pagination-bullet-size: 0px;
+  // --swiper-pagination-bullet-font-family: "Ribeye Marrow", cursive;
+  // --swiper-pagination-bullet-size: 15px;
+  --swiper-pagination-bullet-horizontal-gap: 30px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.swiper-pagination-bullet > img {
+  content: url("./Assets//Images/pagi.png") !important;
+}
+
+.swiper-pagination-bullet-active > img {
+  content: url("./Assets//Images/acti.png") !important;
+}

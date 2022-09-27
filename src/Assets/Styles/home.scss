@@ -1,0 +1,19 @@
+.hidden {
+  overflow: hidden;
+  /* background-color: aqua; */
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.span {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 82.25px;
+  background-image: linear-gradient(
+    238.66deg,
+    #0283e9 -18.13%,
+    #fc01ca 120.27%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

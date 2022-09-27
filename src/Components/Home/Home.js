@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Box, Typography, Button, Grid, Paper, TextField } from "@mui/material";
 import Header from "../Common/Header/Header";
@@ -14,6 +15,103 @@ const icons = {
   zIndex: 1,
   filter: "drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.1))",
   borderRadius: "5px",
+=======
+import { Box, Button, Typography } from "@mui/material";
+import axios from "axios";
+
+import "./Home.css";
+import React from "react";
+
+import { useState } from "react";
+import {Table,
+TableBody,
+TableCell,
+TableContainer,
+TableHead,
+TableRow,
+Paper,
+} from "@mui/material";
+
+const Home = () => {
+  const [table, setTable] = useState([]);
+
+  const submit = () => {
+    axios.get("https://dummy-server123.herokuapp.com/user").then((response) => {
+      console.log(response);
+      setTable(response.data.data);
+    });
+  };
+
+  return (
+    <>
+
+    <Button onClick={submit} variant="outlined">Get Data</Button>
+    <Box>
+                <TableContainer component={Paper}>
+                  <Table
+                    sx={{ maxWidth: "100%" }}
+                    size="large"
+                    aria-label="a dense table"
+                  >
+                    <TableHead>
+                      <TableRow>
+                        <TableCell align="left" sx={{display: "none"}}>ID</TableCell>
+                        <TableCell align="center" sx={{width: "30%"}}>Name</TableCell>
+                        <TableCell align="center" sx={{width: "30%"}}>Email</TableCell>
+                        <TableCell align="center" sx={{width: "30%"}}>Message</TableCell>
+                      </TableRow>
+                    </TableHead>
+                  </Table>
+                </TableContainer>
+              </Box>
+    {
+      table.map((value)=> {
+        return (
+          <Box>
+                <TableContainer component={Paper}>
+                  <Table
+                    sx={{ minWidth: "100%" }}
+                    size="medium"
+                    aria-label="a dense table"
+                  >
+                    {/* <TableHead>
+                      <TableRow>
+                      <TableCell align="left">ID</TableCell>
+                        <TableCell align="center">Name</TableCell>
+                        <TableCell align="center">Email</TableCell>
+                        <TableCell align="center">Message</TableCell>
+                      </TableRow>
+                    </TableHead> */}
+                    <TableBody>
+                      <TableRow>
+                        <TableCell align="left" sx={{display: "none"}}>{value._id}</TableCell>
+                        <TableCell align="center" sx={{width: "33%"}}>{value.name}</TableCell>
+                        <TableCell align="center" sx={{width: "35%"}}>{value.email}</TableCell>
+                        <TableCell align="center" sx={{width: "40%"}}>{value.message}</TableCell><br/>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </Box>
+        )
+      })
+    }
+
+      <Button onClick={submit}>Get</Button>
+      {table.map((value) => {
+        return (
+          <Box>
+            <Typography>{value.name}</Typography>
+            <Typography>{value.email}</Typography>
+            <Typography>{value.message}</Typography>
+            <br />
+          </Box>
+        );
+      })}
+
+    </>
+  );
+>>>>>>> 17f0f9bba7cb8d7110c4794ec2e87575acd561dc
 };
 
 function Home() {

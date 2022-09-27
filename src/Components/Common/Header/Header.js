@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -230,3 +231,41 @@ const ResponsiveAppBar = () => {
   );
 };
 export default ResponsiveAppBar;
+=======
+import { Link } from "react-router-dom";
+import "./Header.css";
+import AbcRoundedIcon from '@mui/icons-material/AbcRounded';
+import {useState} from 'react'
+
+
+const Header= () =>{  
+  const[active,setActive] = useState()
+
+  return (
+    
+  <div className='navbar'>
+   
+      <AbcRoundedIcon style={{fontSize:'60pt',marginLeft:'20px',width:'5%'}}/>
+ 
+    
+  
+    
+    <div className='navbar1'>
+      <Link className={active ==='/' ? 'aactive': false} onClick={()=> setActive('/') }to="/" style={{textDecoration: 'none',color:"black"}}>Home</Link>
+   
+      <Link className={active === '/About' ? 'aactive': false} onClick={()=> setActive('/About') }  to="/About" style={{textDecoration: 'none',color:"black"}}>About</Link>
+    
+      <Link className={active === '/Contact' ? 'aactive': false} onClick={()=> setActive('/Contact')} to="/Contact" style={{textDecoration: 'none', color:"black"}}>Contact</Link>
+      </div>
+
+
+    
+  </div>
+)}
+
+
+export default Header;
+
+
+
+>>>>>>> 17f0f9bba7cb8d7110c4794ec2e87575acd561dc

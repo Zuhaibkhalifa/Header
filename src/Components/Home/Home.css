@@ -1,0 +1,42 @@
+body {
+  background-color: var(--color-primary);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg{
+    background-image:url(../../Assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.for{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 95%;
+  width: 60%;
+  margin: auto;
+  background-color: #edf2fd;
+  border: 1px solid #8d99ae;
+}
+
+.inner{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 75%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+.btn{
+    transition-duration: 0.4s;
+}
+.btn:hover {
+  background-color: #2b2d42;
+}
